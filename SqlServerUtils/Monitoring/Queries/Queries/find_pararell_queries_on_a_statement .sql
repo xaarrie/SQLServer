@@ -13,7 +13,8 @@ p.*,
 q.*,
 qs.*,
 qs.total_worker_time/qs.execution_count as avg_worker_time,
-cp.plan_handle
+cp.plan_handle,
+DB_Name(q.dbid) as DatabaseName 
 FROM
 sys.dm_exec_cached_plans cp
 CROSS apply sys.dm_exec_query_plan(cp.plan_handle) p
