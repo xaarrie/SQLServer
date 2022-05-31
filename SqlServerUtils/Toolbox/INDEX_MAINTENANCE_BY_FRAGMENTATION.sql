@@ -49,7 +49,7 @@ IF NOT EXISTS (SELECT 1
 
 
 				WHERE 
-				s.database_id = DB_ID() AND i.name is not null AND
+				s.database_id = DB_ID() AND i.name is not null
 		end else
 		begin
 		/*SI EXISTE UPDATEAMOS LOS DATOS DE LOS INDICES EXISTENTES*/
